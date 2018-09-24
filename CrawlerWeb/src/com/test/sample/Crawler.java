@@ -15,8 +15,10 @@ public class Crawler {
 	private List<String> links = new ArrayList<>();
 
 	public static void main(String[] args) {
-		String url = "https://www.citiustech.com/";
-	
+		String url = "https://github.com/";
+		if(args!=null && args.length>0){
+			url = args[0];
+		}
 		Crawler crawler = new Crawler();
 		try {
 			URL urlObj = new URL(url);
